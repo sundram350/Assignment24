@@ -1,0 +1,145 @@
+Ans=1
+#include<iostream>
+using namespace std;
+void prime(int i);
+int main()
+{
+    int i;
+    cout<<"Enter a Number "<<endl;
+    cin>>i;
+    prime(i);
+    return 0;
+}
+
+void prime(int N)
+{
+    int i;
+    for(i=2;i<N;i++)
+        if(N%i==0)
+            break;
+    if(i==N)
+        cout<<N<<" is Prime "<<endl;
+    else
+        cout<<N<<" is Not Prime "<<endl;
+}
+
+Ans=2
+#include<iostream>
+using namespace std;
+void high_digit(int );
+int main(void)
+{
+    int n;
+    cout<<"Enter a Number "<<endl;
+    cin>>n;
+    high_digit(n);
+    return 0;
+}
+void high_digit(int n)
+{
+    int t,x,max,a,b=0;
+    while(n)
+    {
+        x=n%10;
+        n/=10;
+        max=x>b?x:b;
+        b=max;
+    }
+    cout<<"Highest Digit is "<<max<<endl;
+}
+
+Ans=3
+#include<iostream>
+using namespace std;
+void power(int ,int );
+int main()
+{
+    int x,y;
+    cout<<"Enter value X and Power Value Y : "<<endl;
+    cin>>x>>y;
+    power(x,y);
+}
+void power(int x,int y)
+{
+    int a=1;
+    while(y)
+    {
+        a=x*a;
+        y--;
+    }
+    cout<<"X this Power Y is "<<a<<endl;
+}
+Ans=6
+#include<iostream>
+using namespace std;
+void power(int ,int );
+int main()
+{
+    int x,y;
+    cout<<"Enter value X and Power Value Y : "<<endl;
+    cin>>x>>y;
+    cout<<"Before swap X value "<<x<<" Y value  "<<y<<endl;
+    swap(x,y);
+    cout<<"After Swap X value "<<x<<" Y value  "<<y<<endl;
+    return 0;
+}
+void swap(int &x,int &y)
+{
+    int t;
+    t=x;
+    x=y;
+    y=t;
+}
+
+Ans=7
+#include<iostream>
+using namespace std;
+int swap(int ,int ,int=0);
+int main()
+{
+    int x,y;
+    cout<<"Enter value X and Power Value Y : "<<endl;
+    cin>>x>>y;
+    cout<<swap(x,y)<<endl;
+    int z;
+    cin>>x>>y>>z;
+    cout<<swap(x,y,z)<<endl;
+
+    return 0;
+}
+int swap(int x,int y,int z)
+{
+    return (x+y+z);
+}
+
+Ans=5
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+int fib(int );
+
+int main()
+{
+  cout<<"Find the Value "<<endl;
+  int b;
+  cin>>b;
+  if(b==fib(b))
+    cout<<"Find Fibonacci Series "<<endl;
+  else
+    cout<<"Not Found "<<endl;
+}
+int fib(int b)
+{
+    int x=1,y=0,z;
+    int n=b;
+    while(n)
+    {
+        z=y+x;
+        if(z==b)
+            return b;
+        x=y;
+        y=z;
+        n--;
+    }
+
+}
